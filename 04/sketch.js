@@ -155,7 +155,7 @@ function draw() {
       //Herramienta 6, guarda el canvas
     } else if (tool == 6) {
 
-      saveCanvas(myCanvas, '.jpg');
+      saveCanvas("myCanvas" +frameCount, '.jpg');
       
       //Herramienta 7, crea una sucesion de lineas con coordenadas iniciales
       //ajustables con el slider 3. 
