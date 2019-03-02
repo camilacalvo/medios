@@ -28,8 +28,8 @@ var t2cv = 0;
 function setup() {
   createCanvas(600, 600);
   //iniciar la manzana en una posicion aleatoria
-  xE = random(0, width);
-  yE = random(60, height);
+  xE = random(0, 600);
+  yE = random(60, 600);
   //insertar imagen de manzana
   manzana = createImg('manzana-10.png');
   //posicion manzana
@@ -61,15 +61,15 @@ function draw() {
 
   //mirar si se comió la manzana y avanzar los contadores
   if (dist(x, y, xE, yE) < 40) {
-    xE = random(0, width);
-    yE = random(60, height);
+    xE = random(0, 600);
+    yE = random(60, 600);
     contadorR += 20;
     contadorV -= 0.5;
     // print('true');
   }
   if (dist(x2, y2, xE, yE) < 40) {
-    xE = random(0, width);
-    yE = random(60, height);
+    xE = random(0, 600);
+    yE = random(60, 600);
     contadorV += 20;
     contadorR -= 0.5;
     print(contadorV);
