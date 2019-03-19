@@ -1,11 +1,17 @@
+
+//Variables para almacenar las canciones
 var song1;
 var song2;
+//Botones de pausa
 var pausaboton;
 var pausabotob2;
+//Amplitud de la onda de cada canción
 var amps1;
 var amps2;
+//Array de datos que contienen los valores de las frecuencias
 var trazos1 = [];
 var trazos2 = [];
+//Slider velocidad
 var sliders1;
 var sliders2;
 var tamsliderx = 60;
@@ -14,18 +20,21 @@ var posb1x;
 var posb1y;
 var posb2x;
 var posb2y;
+//Variables paneo
 var panuno;
 var pandos;
+//Volumen
 var genvolum;
 var soundlocx;
 var soundlocY;
 var r = 255;
 var g = 0;
+//Tipografía
 let font;
 fontsize = 20;
 
 
-
+//Función para fijar volumen
 function fijarVolumen() {
 
   var genvolum = map(mouseX, 0, width, 0.0, 1.1);
@@ -33,6 +42,7 @@ function fijarVolumen() {
   song2.setVolume(genvolum);
 }
 
+// Funcion para pausar la primera canción
 function pausarCancion() {
 
   if (song1.isPlaying()) {
@@ -41,6 +51,7 @@ function pausarCancion() {
     song1.play();
   }
 }
+//funcion para pasar la segunda canción
 
 function pausarCancion2() {
 
@@ -52,7 +63,7 @@ function pausarCancion2() {
 }
 
 
-
+//Cargar datos
 function preload() {
   song1 = loadSound('Technologic.mp3');
   song2 = loadSound('AIDIW.mp3');
@@ -63,18 +74,24 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  //reproducir canciones
   song1.play();
   song2.play();
+  //crear botones de pausa 
   pausaboton = createButton('ll');
+  //se añade funcionalidad al botón
   pausaboton.mousePressed(pausarCancion);
   pausaboton.position((windowWidth / 2) - 50, windowHeight / 2 + 10);
   pausaboton2 = createButton('ll');
   pausaboton2.mousePressed(pausarCancion2);
   pausaboton2.position((windowWidth / 2) - 50, (windowHeight / 2) - 30);
+  //creacion del objeto que nos dará la amplitud
   amps1 = new p5.Amplitude();
   amps2 = new p5.Amplitude();
+  //establecer que cancion analiza el objeto 
   amps1.setInput(song1);
   amps2.setInput(song2);
+  //Posición botones y sliders
   posb1x = (windowWidth / 2) - 10;
   posb1y = (windowHeight / 2) + 12;
   posb2x = windowWidth / 2 - 10;
@@ -85,11 +102,12 @@ function setup() {
   sliders2.position(posb2x, posb2y);
   soundlocx = 0;
   soundlocy = (windowHeight / 2) - 10;
+  //Cargar fuente y tamaño
   textFont(font);
   textSize(fontsize);
   textAlign(CENTER, CENTER);
 
-  
+                                     
 }
 
 function draw() {
@@ -97,12 +115,15 @@ function draw() {
   background(255);
   stroke(255);
   line(0, windowHeight / 2, windowWidth, windowHeight / 2);
+  //obtener niveles de sonido
   var vol1 = amps1.getLevel();
   var vol2 = amps2.getLevel();
   trazos1.push(vol1);
   trazos2.push(vol2);
   stroke(255, 0, 0);
   noFill();
+  
+  //iniciar figura con vertices obtenidos de trazos1. 
   beginShape();
   for (var i = 0; i < trazos1.length; i++) {
     var y1 = map(trazos1[i], 0, 1, height, height / 2);
@@ -111,6 +132,7 @@ function draw() {
   }
   endShape();
 
+  //si la figura generada excede el ancho del canvas, se sobreescriben los datos
   if (trazos1.length > width) {
     trazos1.splice(0, 1);
 
