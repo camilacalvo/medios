@@ -6,3 +6,4 @@ Ejercicios de la clase diseño en medios interactivos
 4. [Movimiento](https://camilacalvo.github.io/medios/03/) // [código](https://github.com/camilacalvo/medios/blob/master/03/sketch.js)
 5. [Interaccion](https://camilacalvo.github.io/medios/04/) // [código](https://github.com/camilacalvo/medios/blob/master/04/sketch.js)
 6. [Tiempo](https://camilacalvo.github.io/medios/05/) // [código](https://github.com/camilacalvo/medios/blob/master/05/sketch.js)
+7. [Sonido](https://camilacalvo.github.io/medios/06/) // [código](https://github.com/camilacalvo/medios/blob/master/06/sketch.js)
