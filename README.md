@@ -8,3 +8,4 @@ Ejercicios de la clase diseño en medios interactivos
 6. [Tiempo](https://camilacalvo.github.io/medios/05/) // [código](https://github.com/camilacalvo/medios/blob/master/05/sketch.js)
 7. [Sonido](https://camilacalvo.github.io/medios/06/) // [código](https://github.com/camilacalvo/medios/blob/master/06/sketch.js)
 8. [Ecosistema](https://camilacalvo.github.io/medios/09/) // [código](https://github.com/camilacalvo/medios/blob/master/09/sketch.js)
+9. [Ecosistema vivo](https://camilacalvo.github.io/medios/08/) 
