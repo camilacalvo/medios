@@ -22,7 +22,7 @@ function setup() {
   for (var i = 0; i < 20; i++) {
     fish[i] = new Fish();
   }
-  //Mantener atributos de xw y yw
+  //Mantener atributos de xw y yw del gusano 
   for (var j = 0; j < 30; j++) {
     xw.push(j * 10);
     yw.push(300);
@@ -81,6 +81,7 @@ function draw() {
   willy.display();
   willy.movement();
   }
+  //Reescalar el tiburon cuando se choca con las estrellas
   if (willy.resize == 1){
     push();
     scale(0.5);
@@ -126,6 +127,7 @@ function draw() {
 }
 }
 
+//Funcion que dibuja las olas y hace que se muevan 
 function drawWave(arriba, abajo, xoff) {
   //dibujo de poligono
   beginShape();
@@ -321,8 +323,9 @@ function estrella(_x, _y) {
 
 }
 
+//Mano del pescador
 function humano() {
-
+//Funcion que pinta el pescador en la pantalla
   this.display = function() {
     rectMode(CORNER);
     noStroke();
