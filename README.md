@@ -10,6 +10,6 @@ Ejercicios de la clase diseño en medios interactivos
 8. [Ecosistema](https://camilacalvo.github.io/medios/09/) // [código](https://github.com/camilacalvo/medios/blob/master/09/sketch.js)
 9. [Ecosistema vivo](https://camilacalvo.github.io/medios/08/) // [código](https://github.com/camilacalvo/medios/blob/master/08/sketch.js) 
 
-10.[código](https://github.com/camilacalvo/medios/blob/master/10/sketch.js) //[not working]
+10.[código](https://github.com/camilacalvo/medios/blob/master/10/sketch.js) //[JSON](https://github.com/camilacalvo/medios/blob/master/10/sketch.js)
 
 11.[Visualización csv](https://camilacalvo.github.io/medios/12/)//[Código](https://github.com/camilacalvo/medios/blob/master/11/sketch.jshttps://github.com/camilacalvo/medios/blob/master/11/sketch.js) 
